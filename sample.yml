@@ -1,0 +1,7 @@
+agentdetail:
+  agentname: slave1
+message:
+  test: Hello World
+zipfile:
+  filename: HelloWorldApp
+pipeline: Deploy

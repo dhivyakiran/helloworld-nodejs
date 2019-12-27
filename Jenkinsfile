@@ -7,7 +7,7 @@ pipeline {
 	agent
                 {
                     
-		dockerfile true
+		label 'master'
                             
                 }
 

@@ -7,7 +7,7 @@ pipeline {
 	agent
                 {
                     
-		label "${mydatas.agentdetail.agentname}"
+		dockerfile true
                             
                 }
 

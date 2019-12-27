@@ -48,19 +48,7 @@ pipeline {
 			 }
 		      }
                 }
-
-	    stage('Zip the app')
-	    {
-		when {expression{mydatas.pipeline != "Deploy" }}    
-		steps 
-		{
-	            script
-		      {
-			zip archive: true, dir: './src', glob: '', zipFile: mydatas.zipfile.filename+"_${currentBuild.number}.zip"
-                      } 
-		}
-             }
-		
+	  		
 	  }
 	post {
 	  always {

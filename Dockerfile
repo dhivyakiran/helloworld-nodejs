@@ -1,4 +1,4 @@
 FROM node:latest
-COPY .
-RUN make .
+COPY ./
+RUN make ./
 

@@ -1,4 +1,5 @@
 FROM node:latest
-COPY ./
-RUN make ./
+RUN mkdir sample
+COPY ./ sample/
+
 

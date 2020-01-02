@@ -26,9 +26,7 @@ pipeline {
 		}
 	    stage('Download Dependencies')
                {
-		 agent {
-                docker { image 'node:7-alpine' }
-            }
+		 
 		when {expression{mydatas.pipeline != "Deploy" }}
 		 steps {
 			nodejs(nodeJSInstallationName: 'NodeJS')
@@ -37,6 +35,11 @@ pipeline {
 			 }
 		      }
                 }
+		stage('docker list'){
+			steps{
+				sh 'docker ps'
+			}
+		}
 	  		
 	  }
 	post {

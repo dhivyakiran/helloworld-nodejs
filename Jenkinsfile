@@ -36,7 +36,7 @@ pipeline {
 		      }
                 }
 		stage('Docker Build') {
-			agent { dockerfile true }
+			
       steps {
         sh 'docker build -t hellonodejs:latest .'
       }

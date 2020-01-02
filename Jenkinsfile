@@ -35,11 +35,11 @@ pipeline {
 			 }
 		      }
                 }
-		stage('docker list'){
-			steps{
-				sh 'docker ps'
-			}
-		}
+		stage('Docker Build') {
+      steps {
+        sh 'docker build -t hellonodejs:latest . \ -f Dockerfile .'
+      }
+    }
 	  		
 	  }
 	post {

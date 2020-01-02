@@ -39,7 +39,7 @@ pipeline {
 		{
 			
 		      steps {
-			sh 'sudo docker build -t hellonodejs:latest .'
+			sh 'docker build -t hellonodejs:latest .'
 		      }
    		 }
 	  		

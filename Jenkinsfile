@@ -35,14 +35,16 @@ pipeline {
 			 }
 		      }
                 }
-		stage('Docker Build') {
+		stage('Docker Build') 
+		{
 			
-      steps {
-        sh 'docker build -t hellonodejs:latest .'
-      }
-    }
+		      steps {
+			sh 'docker build -t hellonodejs:latest .'
+		      }
+   		 }
 	  		
 	  }
+}
 	/*post {
 	  always {
 		  mail to: 'dhivya.k@cognizant.com',
@@ -52,7 +54,7 @@ pipeline {
 	        }
 	  
   }*/
-}
+
 	
 	
 

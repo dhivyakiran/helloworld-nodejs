@@ -36,13 +36,14 @@ pipeline {
 		      }
                 }
 		stage('Docker Build') {
+			agent { dockerfile true }
       steps {
-        sh 'docker build -t hellonodejs:latest . \ -f Dockerfile .'
+        sh 'docker build -t hellonodejs:latest .'
       }
     }
 	  		
 	  }
-	post {
+	/*post {
 	  always {
 		  mail to: 'dhivya.k@cognizant.com',
 		  subject: "${currentBuild.result} pipeline: ${currentBuild.fullDisplayName}",
@@ -51,7 +52,7 @@ pipeline {
 	        }
 	  
   }
-}
+}*/
 	
 	
 

@@ -1,5 +1,4 @@
-agentdetail:
-  agentname: master
+agentname: master
 message:
   test: Hello World
 zipfile:

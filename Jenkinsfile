@@ -1,5 +1,5 @@
 node {
-	mydatas = readYaml file: "sample.yml"
+	mydatas = readYaml file: "app.yml"
 }
 
 pipeline {

@@ -17,8 +17,9 @@ pipeline {
 		{
 	          script 
 		    {
-			  
-			    echo "Build url:${currentBuild.absoluteUrl}"
+			  git url: 'https://github.com/dhivyakiran/nodejs1.git'
+			    appdata = readYaml file: "app.yml"
+			    //echo "Build url:${currentBuild.absoluteUrl}"
 			
                      }
 			
@@ -39,7 +40,7 @@ pipeline {
 		{
 			
 		      steps {
-			sh 'docker build -t hellonodejs:latest .'
+			sh 'docker build -t hellonodejs1:latest .'
 		      }
    		 }
 	  		
